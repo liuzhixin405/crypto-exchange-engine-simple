@@ -1,0 +1,15 @@
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.csproj.AssemblyReference.cache
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.AssemblyInfoInputs.cache
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.AssemblyInfo.cs
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.csproj.CoreCompileInputs.cache
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\bin\Debug\net6.0\crypto-exchange-engine-simple.exe
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\bin\Debug\net6.0\crypto-exchange-engine-simple.deps.json
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\bin\Debug\net6.0\crypto-exchange-engine-simple.runtimeconfig.json
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\bin\Debug\net6.0\crypto-exchange-engine-simple.dll
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\bin\Debug\net6.0\crypto-exchange-engine-simple.pdb
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.dll
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\refint\crypto-exchange-engine-simple.dll
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.pdb
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\crypto-exchange-engine-simple.genruntimeconfig.cache
+D:\GitHub\exercise\crypto-exchange-engine-simple\crypto-exchange-engine-simple\obj\Debug\net6.0\ref\crypto-exchange-engine-simple.dll
