@@ -31,9 +31,17 @@ namespace crypto_exchange_engine_simple.Engine
             {
                 buyerOrders.Append(order);
             }
-            else
+            else if (i == -1)
             {
                 buyerOrders.Prepend(order);
+            }
+            else
+            {
+                for (int j = n - 1; j > i+1; j--)
+                {
+                    buyerOrders[j] = buyerOrders[j - 1];
+                }
+                buyerOrders[i] = order;
             }
             return Task.FromResult(this);
         }
@@ -54,9 +62,17 @@ namespace crypto_exchange_engine_simple.Engine
             {
                 sellerOrders.Append(order);
             }
-            else
+            else if (i == -1)
             {
                 sellerOrders.Prepend(order);
+            }
+            else
+            {
+                for (int j = n-1; j > i+1; j--)
+                {
+                    sellerOrders[j] = sellerOrders[j-1];
+                }
+                sellerOrders[i]=order;
             }
             return Task.FromResult(this);
         }
@@ -68,6 +84,7 @@ namespace crypto_exchange_engine_simple.Engine
             {
                 buyerOrders[i] = buyerOrders[i+1];
             }
+           
             return Task.CompletedTask;
         }
         internal Task RemoveSellOrder(int index)
@@ -77,6 +94,8 @@ namespace crypto_exchange_engine_simple.Engine
             {
                 sellerOrders[i] = sellerOrders[i + 1];
             }
+
+            
             return Task.CompletedTask;
         }
 
