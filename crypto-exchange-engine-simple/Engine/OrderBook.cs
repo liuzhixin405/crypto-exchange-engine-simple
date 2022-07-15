@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace crypto_exchange_engine_simple.Engine
 {
-    internal class OrderBook
+    public class OrderBook
     {
         public OrderBook(Order[] sellerOrders, Order[] buyerOrders)
         {
@@ -14,11 +14,12 @@ namespace crypto_exchange_engine_simple.Engine
             this.buyerOrders = buyerOrders;
         }
 
-        readonly Order[] sellerOrders;
-        readonly Order[] buyerOrders;
+         Order[] sellerOrders;
+         Order[] buyerOrders;
 
-        internal Task<OrderBook> AddBuyOrder(Order order)
+        public Task<OrderBook> AddBuyOrder(Order order)
         {
+            Order[] result;
             var n = buyerOrders.Length;
             var i = 0;
             for (i =n-1 ; i >=0; i--)
@@ -29,25 +30,31 @@ namespace crypto_exchange_engine_simple.Engine
             }
             if (i == n - 1)
             {
-                buyerOrders.Append(order);
+                result = buyerOrders.Append(order).ToArray();
             }
             else if (i == -1)
             {
-                buyerOrders.Prepend(order);
+                result = buyerOrders.Prepend(order).ToArray();
             }
             else
             {
-                for (int j = n - 1; j > i+1; j--)
+                result = new Order[n+1];
+                Array.Copy(buyerOrders,result,n);
+                
+                for (int j = n; j > i; j--)
                 {
-                    buyerOrders[j] = buyerOrders[j - 1];
+                    result[j] = result[j - 1];
                 }
-                buyerOrders[i] = order;
+                result[i] = order;
+                
             }
+            buyerOrders = result;
             return Task.FromResult(this);
         }
 
-        internal Task<OrderBook> AddSellOrder(Order order)
+        public Task<OrderBook> AddSellOrder(Order order)
         {
+            Order[] result;
             var n = sellerOrders.Length;
             var i = 0;
             for (i = n-1; i >= 0 ; i--)
@@ -60,46 +67,51 @@ namespace crypto_exchange_engine_simple.Engine
             }
             if (i == n - 1)
             {
-                sellerOrders.Append(order);
+               result = sellerOrders.Append(order).ToArray();
             }
             else if (i == -1)
             {
-                sellerOrders.Prepend(order);
+               result = sellerOrders.Prepend(order).ToArray();
             }
             else
             {
-                for (int j = n-1; j > i+1; j--)
+                result = new Order[n+1];
+                for (int j = n; j > i; j--)
                 {
-                    sellerOrders[j] = sellerOrders[j-1];
+                    result[j] = result[j-1];
                 }
-                sellerOrders[i]=order;
+                result[i]=order;
             }
+            sellerOrders = result;
             return Task.FromResult(this);
         }
 
-        internal Task RemoveBuyOrder(int index)
+        public Task RemoveBuyOrder(int index)
         {
+            Order[] newBuyOrder = new Order[buyerOrders.Length-1];
             var len = buyerOrders.Length;
             for (int i = index; i > len-1; i--)
             {
                 buyerOrders[i] = buyerOrders[i+1];
             }
-           
+            Array.Copy(buyerOrders, newBuyOrder, newBuyOrder.Length);
+            buyerOrders = newBuyOrder;
             return Task.CompletedTask;
         }
-        internal Task RemoveSellOrder(int index)
+        public Task RemoveSellOrder(int index)
         {
+            Order[] newSellOrder = new Order[sellerOrders.Length - 1];
             var len = sellerOrders.Length;
             for (int i = index; i > len - 1; i--)
             {
                 sellerOrders[i] = sellerOrders[i + 1];
             }
-
-            
+            Array.Copy(sellerOrders, newSellOrder, newSellOrder.Length);
+            sellerOrders = newSellOrder;
             return Task.CompletedTask;
         }
 
-        internal Task<Trade[]> Process(Order order)
+        public Task<Trade[]> Process(Order order)
         {
             if (order.Side == 1)
             {
@@ -108,7 +120,7 @@ namespace crypto_exchange_engine_simple.Engine
             return ProcessLimitSell(order);
         }
 
-        internal Task<Trade[]> ProcessLimitBuy(Order order)
+        public Task<Trade[]> ProcessLimitBuy(Order order)
         {
             var trades = new List<Trade>();
             var n = sellerOrders.Length;
@@ -150,7 +162,7 @@ namespace crypto_exchange_engine_simple.Engine
             return Task.FromResult(trades.ToArray());
         }
 
-        internal Task<Trade[]> ProcessLimitSell(Order order)
+        public Task<Trade[]> ProcessLimitSell(Order order)
         {
             var trades = new List<Trade>();
             var n = buyerOrders.Length;

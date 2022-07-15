@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace crypto_exchange_engine_simple.Engine
 {
-    internal class Order
+    public class Order
     {
-        internal decimal Amount { get; set; }
-        internal decimal Price { get; set; }
-        internal string Id { get; set; }
+        public decimal Amount { get; set; }
+        public decimal Price { get; set; }
+        public string Id { get; set; }
         /// <summary>
         /// 0 现价卖单 、1 限价买单
         /// </summary>
-        internal int Side { get; set; } 
+        public int Side { get; set; } 
         public Order(decimal amount,decimal price,string id,int side)
         {
             this.Amount = amount;

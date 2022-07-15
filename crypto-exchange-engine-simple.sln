@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crypto-exchange-engine-simple", "crypto-exchange-engine-simple\crypto-exchange-engine-simple.csproj", "{4CA92932-45DA-44D7-A6F9-903F79890A40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "crypto-exchange-engine-simple", "crypto-exchange-engine-simple\crypto-exchange-engine-simple.csproj", "{4CA92932-45DA-44D7-A6F9-903F79890A40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOrderBook", "TestOrderBook\TestOrderBook.csproj", "{9C3D45F0-5C5B-4708-AF3A-89D1F1D8BAD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4CA92932-45DA-44D7-A6F9-903F79890A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CA92932-45DA-44D7-A6F9-903F79890A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CA92932-45DA-44D7-A6F9-903F79890A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C3D45F0-5C5B-4708-AF3A-89D1F1D8BAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C3D45F0-5C5B-4708-AF3A-89D1F1D8BAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C3D45F0-5C5B-4708-AF3A-89D1F1D8BAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C3D45F0-5C5B-4708-AF3A-89D1F1D8BAD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

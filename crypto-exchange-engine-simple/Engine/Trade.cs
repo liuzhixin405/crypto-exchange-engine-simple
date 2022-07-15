@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace crypto_exchange_engine_simple.Engine
 {
-    internal class Trade
+    public class Trade
     {
-        internal string TakerOrderId { get; set; }
-        internal string MakerOrderId { get; set; }
-        internal decimal Amount { get; set; }
-        internal decimal Price { get; set; }
+        public string TakerOrderId { get; set; }
+        public string MakerOrderId { get; set; }
+        public decimal Amount { get; set; }
+        public decimal Price { get; set; }
         public override string ToString()
         {
             return $"TaskerOrderId:{TakerOrderId},MakerOrderId{MakerOrderId},Amount:{Amount},Price:{Price}";

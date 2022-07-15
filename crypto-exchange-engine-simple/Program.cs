@@ -13,9 +13,9 @@ var orderBook = new OrderBook(new Order[]{
     new Order (3,2,"8", 0),
 });
 
+//price顺序影响结果
 
-
-Console.WriteLine("交易开始"); //TODO未完待续
+Console.WriteLine("交易开始"); 
 for (int i = 9; i < 20; i++)
 {
     var order = new Order(Random.Shared.Next(1, 10), Random.Shared.Next(1, 10), i.ToString(), Random.Shared.Next(0, 1));
