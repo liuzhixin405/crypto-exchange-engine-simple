@@ -3871,19 +3871,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\l\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Users\\l\\Documents\\GitHub\\crypto-exchange-engine-simple\\TestOrderBook\\TestOrderBook.csproj",
+      "projectUniqueName": "D:\\GitHub\\crypto-exchange-engine-simple\\TestOrderBook\\TestOrderBook.csproj",
       "projectName": "TestOrderBook",
-      "projectPath": "G:\\Users\\l\\Documents\\GitHub\\crypto-exchange-engine-simple\\TestOrderBook\\TestOrderBook.csproj",
-      "packagesPath": "C:\\Users\\l\\.nuget\\packages\\",
-      "outputPath": "G:\\Users\\l\\Documents\\GitHub\\crypto-exchange-engine-simple\\TestOrderBook\\obj\\",
+      "projectPath": "D:\\GitHub\\crypto-exchange-engine-simple\\TestOrderBook\\TestOrderBook.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\GitHub\\crypto-exchange-engine-simple\\TestOrderBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\l\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3897,8 +3897,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "G:\\Users\\l\\Documents\\GitHub\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple.csproj": {
-              "projectPath": "G:\\Users\\l\\Documents\\GitHub\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple.csproj"
+            "D:\\GitHub\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple.csproj": {
+              "projectPath": "D:\\GitHub\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple\\crypto-exchange-engine-simple.csproj"
             }
           }
         }
@@ -3945,7 +3945,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

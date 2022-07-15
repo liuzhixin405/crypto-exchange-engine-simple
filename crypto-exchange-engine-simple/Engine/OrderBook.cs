@@ -138,7 +138,7 @@ namespace crypto_exchange_engine_simple.Engine
                         if (sellOrder.Amount == 0)
                         {
                             RemoveSellOrder(i);
-                            Console.WriteLine($"已成交:{order.ToString()},对手id:{sellerOrders[i].Id}");
+                            Console.WriteLine($"已成交:{order.ToString()},对手id:{sellOrder.Id}");
                         }
                         return Task.FromResult(trades.ToArray());
                     }
@@ -153,7 +153,7 @@ namespace crypto_exchange_engine_simple.Engine
                         });
                         order.Amount -= sellOrder.Amount;  
                         RemoveSellOrder(i);
-                        Console.WriteLine($"已成交:{sellerOrders[i].ToString()},对手id:{order.Id}");
+                        Console.WriteLine($"已成交:{sellOrder.ToString()},对手id:{order.Id}");
                         continue;
                     }
                 }
@@ -182,7 +182,7 @@ namespace crypto_exchange_engine_simple.Engine
                         if (buyerOrder.Amount == 0)
                         {
                             RemoveBuyOrder(i);
-                            Console.WriteLine($"已成交:{order.ToString()},对手id:{buyerOrders[i].Id}");
+                            Console.WriteLine($"已成交:{order.ToString()},对手id:{buyerOrder.Id}");
                         }
                         return Task.FromResult(trades.ToArray());
                     }
@@ -191,7 +191,7 @@ namespace crypto_exchange_engine_simple.Engine
                         trades.Add(new Trade { TakerOrderId = order.Id, MakerOrderId = buyerOrder.Id, Amount = buyerOrder.Amount, Price = buyerOrder.Price });
                         order.Amount -= buyerOrder.Amount;
                         RemoveBuyOrder(i);
-                        Console.WriteLine($"已成交:{buyerOrders[i].ToString()},对手id:{order.Id}");
+                        Console.WriteLine($"已成交:{buyerOrder.ToString()},对手id:{order.Id}");
                         continue;
                     }
                 }

@@ -1,17 +1,14 @@
 ﻿using crypto_exchange_engine_simple.Engine;
 
+var sellOrders = new List<Order>();
+var buyerOrders = new List<Order>();
+for (int i = 0; i < 100; i++)
+{
+    sellOrders.Add(new Order(Random.Shared.Next(1, 100), Random.Shared.Next(1, 10), (i+9).ToString(), Random.Shared.Next(0, 1)));
+    buyerOrders.Add(new Order(Random.Shared.Next(1, 100), Random.Shared.Next(1, 10), (i + 110).ToString(), Random.Shared.Next(0, 1)));
+}
 
-var orderBook = new OrderBook(new Order[]{
-    new Order (1,1,"1",1),
-    new Order (2,2,"2",1),
-    new Order (1,1,"3", 0),
-    new Order (2,2,"4", 0)
-},new Order[] {
-    new Order (2,3,"5", 1),
-    new Order (3,2,"6", 1),
-    new Order (2,3,"7", 0),
-    new Order (3,2,"8", 0),
-});
+var orderBook = new OrderBook(sellOrders.OrderByDescending(x=>x.Price).ToArray(),buyerOrders.OrderBy(x=>x.Price).ToArray());
 
 //price顺序影响结果
 
